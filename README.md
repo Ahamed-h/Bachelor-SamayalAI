@@ -10,11 +10,11 @@ Bachelor SamayalAI helps students and working bachelors decide **what to cook ri
 
 Bachelors often struggle with:
 
-- ❓ What to cook with limited ingredients  
-- ⏱️ Lack of time  
-- 💸 Tight budgets  
-- 🍳 Limited cooking skills  
-- 🧰 Few kitchen tools  
+- ❓ What to cook with limited ingredients
+- ⏱️ Lack of time
+- 💸 Tight budgets
+- 🍳 Limited cooking skills
+- 🧰 Few kitchen tools
 
 This leads to food waste, unhealthy eating, or expensive takeout.
 
@@ -22,156 +22,164 @@ This leads to food waste, unhealthy eating, or expensive takeout.
 
 ## 💡 Solution
 
-Bachelor SamayalAI is an open-source AI assistant that provides:
+Bachelor SamayalAI is an open-source AI assistant that:
 
-### 📸 Ingredient → Dish Intelligence
-
-Upload a kitchen photo or enter ingredients → get dish recommendations instantly.
+- Detects ingredients from photos or text input
+- Recommends quick, easy, budget-friendly dishes instantly
+- Filters recipes by time, budget, equipment, and health needs
 
 ---
 
 ## ⭐ Key Features
 
 ### 🧠 Ingredient Detection
-Detects multiple raw ingredients from messy real-world photos using YOLOv8.
+Detects multiple raw ingredients from messy real-world photos using **YOLOv8**.
 
 ### 🍛 Dish Recommendations
 Suggests simple, quick dishes that can be cooked using available ingredients.
 
 ---
 
-## 🔥 Bachelor Modes (Unique)
+## 🔥 Bachelor Modes
 
-### ⚡ Lazy Mode
-Suggests dishes with:
+| Mode | Description |
+|------|-------------|
+| ⚡ **Lazy Mode** | Fewest steps, minimal effort, one-pan cooking |
+| 💸 **Budget Mode** | Cheapest meals using available ingredients |
+| ⏱️ **Time Mode** | Filter by 10 / 20 / 30 minutes cooking time |
+| 🍳 **Equipment Mode** | Dishes based on available tools (stove, induction, rice cooker, microwave) |
+| 🛒 **Missing Ingredients** | Tells you what to buy to unlock more dishes |
 
-- Fewest steps  
-- Minimal effort  
-- One-pan cooking  
-
----
-
-### 💸 Budget Mode
-Recommends cheapest meals possible using available ingredients.
+> **Example:** Buy eggs → Unlock multiple quick meals
 
 ---
 
-### ⏱️ Time Mode
-Filter by available cooking time:
-
-- 10 minutes  
-- 20 minutes  
-- 30 minutes  
-
----
-
-### 🍳 Equipment Mode
-Suggest dishes based on tools available:
-
-- Stove  
-- Induction  
-- Rice cooker  
-- Microwave  
-
----
-
-### 🛒 Missing Ingredient Suggestions
-Tells what to buy to unlock more dishes.
-
-Example:
-
-> Buy eggs → Unlock multiple quick meals
-
----
-
-## 🏥 Health Filter (Optional)
+## 🏥 Health Filter *(Optional)*
 
 Suggests dishes that are:
 
-- Low oil  
-- High protein  
-- Diabetic-friendly  
+- Low oil
+- High protein
+- Diabetic-friendly
 
 ---
 
 ## 🧰 Tech Stack
 
-**Detection:** YOLOv8 (Ultralytics)  
-**Backend:** FastAPI  
-**Frontend:** Streamlit  
-**Data:** Open recipe dataset (JSON)  
-**Language:** Python  
+| Component | Technology |
+|-----------|------------|
+| Ingredient Detection | YOLOv8 (Ultralytics) |
+| Backend | FastAPI |
+| Frontend | Streamlit |
+| Recipe Data | Open recipe dataset (JSON) |
+| Language | Python |
 
-All components are fully open-source.
+> All components are fully open-source.
 
 ---
 
 ## 🏗️ How It Works
 
-1. User uploads ingredient photo or text list  
-2. YOLO detects ingredients  
-3. System builds ingredient list  
-4. Rule-based engine matches recipes  
-5. Filters applied (time, budget, equipment, health)  
-6. Best dishes recommended  
+```
+User Input (Photo / Text)
+        ↓
+YOLOv8 Ingredient Detection
+        ↓
+Ingredient List Built
+        ↓
+Rule-Based Recipe Matching
+        ↓
+Filters Applied (Time / Budget / Equipment / Health)
+        ↓
+Best Dishes Recommended 🍽️
+```
 
 ---
 
 ## 📦 Installation
 
+```bash
+# Clone the repository
+git clone https://github.com/Ahamed-h/Bachelor-SamayalAI.git
+cd Bachelor-SamayalAI
 
+# Install dependencies
+pip install -r requirements.txt
 
-Input:
+# Run the app
+streamlit run app.py
+```
 
-Photo containing:
-Onion
-Tomato
-Eggs
+---
 
-Output:
+## 🖥️ Demo
 
+**Input:**
+
+```
+📸 Photo containing:
+  - Onion
+  - Tomato
+  - Eggs
+```
+
+**Output:**
+
+```
 🍳 Quick Egg Scramble
-⚡ 12 minutes
-💸 Cheap
-🍳 Beginner friendly
-🎯 Target Users
-- College students
-- Hostel residents
-- Working bachelors
-- Beginners in cooking
+⚡ 12 minutes  |  💸 Cheap  |  🍳 Beginner Friendly
+```
 
-##🌍 Impact
+---
 
-Reduces food waste
-Promotes home cooking
-Saves money
-Encourages healthier eating
+## 🎯 Target Users
 
-##📜 License
+- 🎓 College students
+- 🏠 Hostel residents
+- 👨‍💻 Working bachelors
+- 🔰 Beginners in cooking
 
-This project is released under the MIT License.
+---
 
-##🤝 Contributions
+## 🌍 Impact
 
-Contributions are welcome!
-Please open issues or submit pull requests.
+- ♻️ Reduces food waste
+- 🏡 Promotes home cooking
+- 💰 Saves money
+- 🥗 Encourages healthier eating
 
-##🏆 FOSS Hack 2026 Project
+---
 
-Built for FOSS Hack 2026 — a 31-day open-source hackathon.
+## 📌 Future Improvements
 
-##📌 Future Improvements
+- [ ] More recipes
+- [ ] Voice input
+- [ ] Nutrition tracking
+- [ ] Mobile app version
+- [ ] Offline mode
 
-More recipes
+---
 
-Voice input
+## 🏆 FOSS Hack 2026 Project
 
-Nutrition tracking
+Built for **FOSS Hack 2026** — a 31-day open-source hackathon.
 
-Mobile app version
+---
 
-Offline mode
+## 📜 License
 
-##⭐ If you like this project
+This project is released under the [MIT License](LICENSE).
 
-Give it a star ⭐ on GitHub!
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+- 🐛 Open issues for bugs or feature requests
+- 🔀 Submit pull requests
+- ⭐ Star the repo if you find it useful!
+
+---
+
+*If you found this helpful, give it a star ⭐ on GitHub — it means a lot!*
